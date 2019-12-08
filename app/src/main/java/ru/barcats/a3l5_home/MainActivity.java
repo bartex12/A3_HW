@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements
         navigationView.setNavigationItemSelectedListener(this);
 
         parent = findViewById(R.id.content);
-        optionId = R.layout.fragment_1;
+        optionId = R.layout.fragment_fruits;
         getNewFragment(optionId);
     }
 
@@ -69,17 +69,17 @@ public class MainActivity extends AppCompatActivity implements
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_frag1) {
-            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_1");
-            optionId = R.layout.fragment_1;
+            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_fruits");
+            optionId = R.layout.fragment_fruits;
         }  else if (id == R.id.nav_frag2) {
-            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_2");
-            optionId = R.layout.fragment_2;
+            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_vegetables");
+            optionId = R.layout.fragment_vegetables;
         }else if (id == R.id.nav_frag3) {
-            Log.d(TAG, "MainActivity onNavigationItemSelected fragment_3");
-            optionId = R.layout.fragment_3;
+            Log.d(TAG, "MainActivity onNavigationItemSelected fragment_nature");
+            optionId = R.layout.fragment_nature;
         }else if(id == R.id.nav_frag4) {
-            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_4");
-            optionId = R.layout.fragment_4;
+            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_animals");
+            optionId = R.layout.fragment_animals;
         }
         
         // Выделяем выбранный пункт меню в шторке

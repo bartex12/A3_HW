@@ -9,11 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import ru.barcats.a3l5_home.R;
 
-public class Vrgetables extends Fragment {
+public class Vegetables extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_2, container, false);
+        View root = inflater.inflate(R.layout.fragment_vegetables, container, false);
 
         return root;
     }

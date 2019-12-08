@@ -13,7 +13,7 @@ public class Fruits extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_1, container, false);
+        View root = inflater.inflate(R.layout.fragment_fruits, container, false);
         return root;
     }
 }
