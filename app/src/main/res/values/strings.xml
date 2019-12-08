@@ -123,5 +123,6 @@
 Выписаться ты можешь, когда пожелаешь,\n
 Только вырваться отсюда тебе не удастся"…\n
 </string>
+    <string name="fabAct">FabActivity</string>
 
 </resources>
