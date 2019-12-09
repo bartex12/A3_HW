@@ -14,11 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 
-public class FabBehaviorColor extends FloatingActionButton.Behavior  {
+public class FabBehaviorColorAnime extends FloatingActionButton.Behavior  {
 
     private static final String TAG = "33333";
 
-    public FabBehaviorColor(Context context, AttributeSet attrs) {
+    public FabBehaviorColorAnime(Context context, AttributeSet attrs) {
         super();
     }
 
@@ -32,16 +32,25 @@ public class FabBehaviorColor extends FloatingActionButton.Behavior  {
                                int dyUnconsumed,
                                int type) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type);
-        if ( dyConsumed > 0) {
+
+        if (dyConsumed > 0) {
             Log.d(TAG,"FabBehavior onNestedScroll dyConsumed > 0");
+            //при прокрутке вверх меняем цвет, иконку и уводим вправо
             child.setBackgroundTintList(ColorStateList.valueOf(target
                     .getContext().getResources().getColor(R.color.colorPrimary)));
             child.setImageResource(R.drawable.ic_arrow_upward_white_24dp);
+
+            CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) child.getLayoutParams();
+            int fab_bottomMargin = layoutParams.bottomMargin;
+            child.animate().translationX(child.getHeight() + fab_bottomMargin).setInterpolator(new LinearInterpolator()).start();
         } else if (dyConsumed < 0) {
             Log.d(TAG,"FabBehavior onNestedScroll dyConsumed < 0");
+            //при прокрутке вниз меняем цвет, иконку и показываем справа
             child.setBackgroundTintList(ColorStateList.valueOf(target
                     .getContext().getResources().getColor(R.color.colorAccent)));
             child.setImageResource(R.drawable.ic_arrow_downward_white_24dp);
+
+            child.animate().translationX(0).setInterpolator(new LinearInterpolator()).start();
         }
     }
 
