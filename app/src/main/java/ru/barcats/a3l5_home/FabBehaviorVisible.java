@@ -1,7 +1,9 @@
 package ru.barcats.a3l5_home;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,10 +14,14 @@ import androidx.core.view.ViewCompat;
 
 public class FabBehaviorVisible extends FloatingActionButton.Behavior   {
 
+
+    private static final String TAG = "33333";
+
     public FabBehaviorVisible(Context context, AttributeSet attrs) {
         super();
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void onNestedScroll(@NonNull CoordinatorLayout coordinatorLayout,
                                @NonNull FloatingActionButton child,
@@ -26,10 +32,14 @@ public class FabBehaviorVisible extends FloatingActionButton.Behavior   {
                                int dyUnconsumed,
                                int type) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type);
-        if (dyConsumed > 0 && child.getVisibility() == View.VISIBLE) {
-            child.hide();
-        } else if (dyConsumed < 0 && child.getVisibility() != View.VISIBLE) {
-            child.show();
+
+        if ((dyConsumed > 0) && (child.getVisibility() == View.VISIBLE)) {
+            Log.d(TAG,"FabBehavior onNestedScroll dyConsumed > 0");
+            child.setVisibility(View.INVISIBLE);
+
+        } else if ((dyConsumed < 0) && (child.getVisibility() != View.VISIBLE)) {
+            Log.d(TAG,"FabBehavior onNestedScroll dyConsumed < 0");
+            child.setVisibility(View.VISIBLE);
         }
     }
 

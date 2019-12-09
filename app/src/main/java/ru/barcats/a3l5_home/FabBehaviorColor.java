@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
@@ -14,6 +15,8 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 
 public class FabBehaviorColor extends FloatingActionButton.Behavior  {
+
+    private static final String TAG = "33333";
 
     public FabBehaviorColor(Context context, AttributeSet attrs) {
         super();
@@ -30,10 +33,12 @@ public class FabBehaviorColor extends FloatingActionButton.Behavior  {
                                int type) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type);
         if ( dyConsumed > 0) {
+            Log.d(TAG,"FabBehavior onNestedScroll dyConsumed > 0");
             child.setBackgroundTintList(ColorStateList.valueOf(target
                     .getContext().getResources().getColor(R.color.colorPrimary)));
             child.setImageResource(R.drawable.ic_arrow_upward_white_24dp);
         } else if (dyConsumed < 0) {
+            Log.d(TAG,"FabBehavior onNestedScroll dyConsumed < 0");
             child.setBackgroundTintList(ColorStateList.valueOf(target
                     .getContext().getResources().getColor(R.color.colorAccent)));
             child.setImageResource(R.drawable.ic_arrow_downward_white_24dp);
