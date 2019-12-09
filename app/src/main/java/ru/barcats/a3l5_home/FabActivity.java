@@ -1,7 +1,6 @@
 package ru.barcats.a3l5_home;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class FabActivity extends AppCompatActivity {
