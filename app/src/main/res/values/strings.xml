@@ -124,5 +124,7 @@
 Только вырваться отсюда тебе не удастся"…\n
 </string>
     <string name="fabAct">FabActivity</string>
+    <string name="showAsCard">Показать как карточки</string>
+    <string name="discard">отмена</string>
 
 </resources>

@@ -14,16 +14,24 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MyPictureAdapter extends RecyclerView.Adapter<MyPictureAdapter.MyViewHolder> {
 
     private List<String> list;
+    private boolean isCard;
 
-    MyPictureAdapter( List<String> list){
-    this.list = list;
+    MyPictureAdapter( List<String> list, boolean isCard){
+        this.list = list;
+        this.isCard = isCard;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item, parent, false);
+        View view;
+        if (isCard){
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_card, parent, false);
+        }else {
+            view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item, parent, false);
+        }
         return new MyViewHolder(view);
     }
 
