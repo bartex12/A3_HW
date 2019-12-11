@@ -14,6 +14,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
@@ -29,6 +30,7 @@
         android:layout_gravity="bottom|end"
         android:backgroundTint="@color/colorPrimary"
         android:layout_margin="@dimen/fab_margin"
+        app:layout_behavior="ru.barcats.a3l5_home.FabBehaviorVisible"
         app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
