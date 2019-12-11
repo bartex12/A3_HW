@@ -14,10 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MyPictureAdapter extends RecyclerView.Adapter<MyPictureAdapter.MyViewHolder> {
 
     private List<String> list;
+    private List<Integer> listResId;
     private boolean isCard;
 
-    MyPictureAdapter( List<String> list, boolean isCard){
+    public MyPictureAdapter( List<String> list, List<Integer> listResId, boolean isCard){
         this.list = list;
+        this.listResId = listResId;
         this.isCard = isCard;
     }
 
@@ -39,21 +41,7 @@ public class MyPictureAdapter extends RecyclerView.Adapter<MyPictureAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.textView.setText(list.get(position));
-        switch (position){
-            case 0:
-                holder.imageView.setImageResource(R.drawable.orange);
-                break;
-            case 1:
-                holder.imageView.setImageResource(R.drawable.apple1);
-                break;
-            case 2:
-                holder.imageView.setImageResource(R.drawable.grusha);
-                break;
-            case 3:
-                holder.imageView.setImageResource(R.drawable.limon);
-                break;
-        }
-
+        holder.imageView.setImageResource(listResId.get(position));
     }
 
     @Override

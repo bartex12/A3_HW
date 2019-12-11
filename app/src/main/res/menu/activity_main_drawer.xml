@@ -11,15 +11,12 @@
         <item
             android:id="@+id/nav_frag2"
             android:icon="@drawable/carrot_24px"
-            android:title="@string/Vegetables" />
+            android:title="@string/vegetables" />
         <item
             android:id="@+id/nav_frag3"
             android:icon="@drawable/beach_24px"
             android:title="@string/nature" />
-        <item
-            android:id="@+id/nav_frag4"
-            android:icon="@drawable/cat_24px"
-            android:title="@string/animals" />
+
     </group>
 
 </menu>

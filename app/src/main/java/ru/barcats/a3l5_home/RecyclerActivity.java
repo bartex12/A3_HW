@@ -3,7 +3,7 @@ package ru.barcats.a3l5_home;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SnapHelper;
+import ru.barcats.a3l5_home.data.DataFruits;
 
 import android.os.Bundle;
 import android.view.View;
@@ -48,8 +48,9 @@ public class RecyclerActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        FruitPictures dataPicture = new FruitPictures();
-        MyPictureAdapter adapter = new MyPictureAdapter(dataPicture.getListPictures(), isCard);
+        DataFruits dataPicture = new DataFruits();
+        MyPictureAdapter adapter = new MyPictureAdapter(dataPicture.getListPictures(),
+                dataPicture.getListResId(), isCard);
         recyclerView.setAdapter(adapter);
     }
 }

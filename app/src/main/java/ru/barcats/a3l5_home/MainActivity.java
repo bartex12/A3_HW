@@ -5,7 +5,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -16,14 +15,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import ru.barcats.a3l5_home.frags.Animals;
+import ru.barcats.a3l5_home.frags.Fruits;
+import ru.barcats.a3l5_home.frags.Nature;
+import ru.barcats.a3l5_home.frags.Vegetables;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "33333";
-    int optionId;
-    ViewGroup parent;
     DrawerLayout drawer;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +51,12 @@ public class MainActivity extends AppCompatActivity implements
                 drawer.openDrawer(GravityCompat.START);
             }
         });
-        //DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        parent = findViewById(R.id.content);
-        optionId = R.layout.fragment_fruits;
-        getNewFragment(optionId);
+        fragment = Animals.newInstance();
+        setPicturesFragment(fragment);
     }
 
     @Override
@@ -65,36 +68,39 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        // Handle navigation view item clicks here.
+
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_frag1) {
             Log.d(TAG,"MainActivity onNavigationItemSelected fragment_fruits");
-            optionId = R.layout.fragment_fruits;
+            fragment = Fruits.newInstance();
+
         }  else if (id == R.id.nav_frag2) {
             Log.d(TAG,"MainActivity onNavigationItemSelected fragment_vegetables");
-            optionId = R.layout.fragment_vegetables;
+            fragment = Vegetables.newInstance();
+
         }else if (id == R.id.nav_frag3) {
             Log.d(TAG, "MainActivity onNavigationItemSelected fragment_nature");
-            optionId = R.layout.fragment_nature;
-        }else if(id == R.id.nav_frag4) {
-            Log.d(TAG,"MainActivity onNavigationItemSelected fragment_animals");
-            optionId = R.layout.fragment_animals;
+            fragment = Nature.newInstance();
+
+        }else {
+            fragment = Animals.newInstance();
         }
-        
         // Выделяем выбранный пункт меню в шторке
         menuItem.setChecked(true);
 
-        getNewFragment(optionId);
+        setPicturesFragment(fragment);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return false;
     }
 
-    private void getNewFragment(int id) {
-        parent.removeAllViews();
-        View newContent = getLayoutInflater().inflate(id, parent, false);
-        parent.addView(newContent);
+    private void setPicturesFragment(Fragment fragment) {
+        Log.d(TAG, "MainActivity setPicturesFragment");
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content, fragment);  // замена фрагмента
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// эффект
+        ft.commit();
     }
 }

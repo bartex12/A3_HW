@@ -12,21 +12,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/text_vegetables"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/Vegetables"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/text_vegetables"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/vegetables"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/imageView5"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerVegetables"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/morkov" />
+            android:background="#DBF8D3">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView5"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:srcCompat="@drawable/morkov" />-->
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
