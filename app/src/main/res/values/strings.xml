@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">A3L5_home</string>
+    <string name="txt">текст</string>
+    <string name="ok">OK</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -126,5 +128,10 @@
     <string name="fabAct">FabActivity</string>
     <string name="showAsCard">Показать как карточки</string>
     <string name="discard">отмена</string>
+    <string name="title_air">Самолёт</string>
+    <string name="title_car">Автомобиль</string>
+    <string name="title_ship">Корабль</string>
+    <string name="horse">Олени</string>
+    <string name="bottomActivity">BottomActivity</string>
 
 </resources>
