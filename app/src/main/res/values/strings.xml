@@ -36,7 +36,7 @@
     <string name="ToolbarActivity">ToolbarActivity</string>
     <string name="ButtonActivity">ButtonActivity</string>
     <string name="fruit">Фрукты</string>
-    <string name="Vegetables">Овощи</string>
+    <string name="vegetables">Овощи</string>
     <string name="nature">Природа</string>
     <string name="animals">Животные</string>
     <string name="download">Загружай!</string>
@@ -124,5 +124,7 @@
 Только вырваться отсюда тебе не удастся"…\n
 </string>
     <string name="fabAct">FabActivity</string>
+    <string name="showAsCard">Показать как карточки</string>
+    <string name="discard">отмена</string>
 
 </resources>

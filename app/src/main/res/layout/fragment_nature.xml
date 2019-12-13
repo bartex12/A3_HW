@@ -13,22 +13,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/text_nature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/nature"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/text_nature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/nature"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/images1" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNatures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DBF8D3">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:srcCompat="@drawable/images1" />-->
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
