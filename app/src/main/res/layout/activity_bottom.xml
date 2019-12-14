@@ -8,6 +8,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomView"
+        app:labelVisibilityMode="selected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,3 +20,5 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    app:labelVisibilityMode="selected" только выбранная будет с текстом-->
+<!--    android:background="@android:color/holo_blue_bright" так меняем фон-->

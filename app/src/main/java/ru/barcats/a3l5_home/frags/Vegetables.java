@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import ru.barcats.a3l5_home.MyPictureAdapter;
+import ru.barcats.a3l5_home.adapters.MyPictureAdapter;
 import ru.barcats.a3l5_home.R;
 import ru.barcats.a3l5_home.data.DataVegetables;
 

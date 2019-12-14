@@ -133,5 +133,10 @@
     <string name="title_ship">Корабль</string>
     <string name="horse">Олени</string>
     <string name="bottomActivity">BottomActivity</string>
+    <string name="TabActivity">TabActivity</string>
+    <string name="fragment1">Fragment1</string>
+    <string name="fragment2">Fragment2</string>
+    <string name="fragment3">Fragment3</string>
+    <string name="materialdesignlesson7">MaterialDesignLesson7</string>
 
 </resources>

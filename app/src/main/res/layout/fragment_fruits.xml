@@ -31,8 +31,7 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-
-
+<!--        если нужно просто картинку а не RecyclerView тогда будет так-->
 <!--        <ImageView-->
 <!--            android:id="@+id/imageView4"-->
 <!--            android:layout_width="wrap_content"-->
