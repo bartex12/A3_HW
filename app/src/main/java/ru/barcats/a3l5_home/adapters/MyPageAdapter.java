@@ -14,7 +14,7 @@ public class MyPageAdapter extends FragmentPagerAdapter {
     private ArrayList<String> tabTitles = new ArrayList<>();
 
     public MyPageAdapter(@NonNull FragmentManager fm) {
-        super(fm);
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
     }
 
     public void addFragment(Fragment fragment, String tabTitle){
