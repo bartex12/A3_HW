@@ -39,3 +39,49 @@ public class MyPageAdapter extends FragmentPagerAdapter {
         return tabTitles.get(position);
     }
 }
+
+
+/*
+    //можно было не добавлять фрагменты  в список в методе addFragment из TabActivity,
+    //а добавлять их прямо в адаптере в этом методе
+    @NonNull
+    @Override
+    public Fragment getItem(int position) {
+        switch (position) {
+            case 0:
+                return Fruits.newInstance();
+            case 1:
+                return Vegetables.newInstance();
+            case 2:
+                return Nature.newInstance();
+
+            default:
+                return  Fruits.newInstance();
+        }
+    }
+
+        //если не добавлять фрагменты  в список в методе addFragment из TabActivity,
+    //то нужно возвращать количество фрагментов
+    @Override
+    public int getCount() {
+        return 3;
+    }
+
+        //можно было не добавлять заголовки в список в методе addFragment из TabActivity,
+    //а добавлять их прямо в адаптере в этом методе
+        @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "Фрукты";
+                case 1:
+                    return "Овощи";
+                case 2:
+                    return "Природа";
+
+                default:
+                    return "Фрукты";
+            }
+    }
+* */
