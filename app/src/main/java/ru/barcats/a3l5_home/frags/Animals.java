@@ -37,9 +37,12 @@ public class Animals extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        //так как мы создаём фрагменты внутри фракмента, нужно использовать
+        //менеджер фрагментов для фрагмента, вызывая его getChildFragmentManager()
+        //https://stackoverflow.com/questions/14740445/
+        // what-is-difference-between-getsupportfragmentmanager-and-getchildfragmentmanag/14775322
         MyFragmentPageAlapter adapter = new MyFragmentPageAlapter(
-                Objects.requireNonNull(getActivity()).getSupportFragmentManager());
+                getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.view_pager_animals);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
