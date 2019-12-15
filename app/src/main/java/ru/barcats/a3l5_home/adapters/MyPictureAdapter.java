@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import ru.barcats.a3l5_home.R;
 
+//используется во всех фрагментах для показа картинок
 public class MyPictureAdapter extends RecyclerView.Adapter<MyPictureAdapter.MyViewHolder> {
 
     private List<String> list;

@@ -9,6 +9,7 @@ import ru.barcats.a3l5_home.frags.AnimalsFabricated;
 import ru.barcats.a3l5_home.frags.AnimalsHome;
 import ru.barcats.a3l5_home.frags.AnimalsWild;
 
+//адаптер ViewPager используется в Animals
 public class MyFragmentPageAlapter extends FragmentPagerAdapter {
 
     public MyFragmentPageAlapter(@NonNull FragmentManager fm) {

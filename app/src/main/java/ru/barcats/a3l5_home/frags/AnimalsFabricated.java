@@ -22,6 +22,7 @@ import ru.barcats.a3l5_home.data.DataFruits;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class AnimalsFabricated extends Fragment {
 
     private static final String TAG = "33333";

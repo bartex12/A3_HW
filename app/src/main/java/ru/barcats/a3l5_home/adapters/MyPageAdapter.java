@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+//адаптер ViewPager используется в TabActivity
 public class MyPageAdapter extends FragmentPagerAdapter {
 
     private ArrayList<Fragment> fragments = new ArrayList<>();
