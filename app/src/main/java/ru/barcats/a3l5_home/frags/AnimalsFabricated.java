@@ -59,5 +59,6 @@ public class AnimalsFabricated extends Fragment {
         Log.d(TAG,"AnimalsFabricated initRecycler list.size = " +
                 dataPicture.getListPictures().size());
         recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
     }
 }

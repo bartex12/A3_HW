@@ -42,7 +42,7 @@ public class Animals extends Fragment {
         tabs.setupWithViewPager(viewPager);
     }
 
-    //nfr можно скрывать и показывать ToolBar из фрагмента со вклажками
+    //так можно скрывать и показывать ToolBar из фрагмента со вклажками
 //    @Override
 //    public void onResume() {
 //        super.onResume();
