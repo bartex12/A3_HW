@@ -3,26 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <!--если будет не Coordinatorlayout - содержимое пропадает-->
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <TextView
-            android:id="@+id/title_frag_animals"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/animals"
-            android:gravity="center"
-            android:minHeight="?actionBarSize"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            android:textColor="@android:color/white"/>
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs_animals"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            />
+<!--        не катит эта строка - содержимое пропадает-->
+<!--        app:layout_scrollFlags="scroll|enterAlways"-->
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -32,6 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+<!--    без этой строки содержимое пропадает-->
+<!--    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

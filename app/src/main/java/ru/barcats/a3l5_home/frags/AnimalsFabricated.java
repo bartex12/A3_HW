@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ import ru.barcats.a3l5_home.data.DataFruits;
  * A simple {@link Fragment} subclass.
  */
 public class AnimalsFabricated extends Fragment {
+
+    private static final String TAG = "33333";
 
     public static AnimalsFabricated newInstance() {
         return  new AnimalsFabricated();
@@ -53,6 +56,8 @@ public class AnimalsFabricated extends Fragment {
         DataFabricated dataPicture = new DataFabricated();
         MyPictureAdapter adapter = new MyPictureAdapter(dataPicture.getListPictures(),
                 dataPicture.getListResId(),true);
+        Log.d(TAG,"AnimalsFabricated initRecycler list.size = " +
+                dataPicture.getListPictures().size());
         recyclerView.setAdapter(adapter);
     }
 }

@@ -11,14 +11,14 @@ public class DataFabricated {
     private List<Integer> listResId;
 
     public DataFabricated() {
-        listPictures = new ArrayList<>(3);
+        listPictures = new ArrayList<>(5);
         listPictures.add("Микки Маус");
         listPictures.add("Том");
         listPictures.add("Джерри");
         listPictures.add("Винни Пух");
         listPictures.add("Пятачок");
 
-        listResId = new ArrayList<>(3);
+        listResId = new ArrayList<>(5);
         listResId.add(R.drawable.mickey_mouse1_12);
         listResId.add(R.drawable.tom1_12);
         listResId.add(R.drawable.jerry1_12);

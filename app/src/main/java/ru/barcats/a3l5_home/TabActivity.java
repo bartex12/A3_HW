@@ -23,6 +23,8 @@ public class TabActivity extends AppCompatActivity {
         Fragment fragment2 = Vegetables.newInstance();
         Fragment fragment3 = Nature.newInstance();
 
+        //здесь используется вариант добавления фрагментов в адаптер из активити
+        //есть ещё вариант добавления фрагментов внутри адаптера - см. MyFragmentPageAlapter
         MyPageAdapter adapter = new MyPageAdapter(getSupportFragmentManager());
         adapter.addFragment(fragment1, getResources().getString(R.string.fruit));
         adapter.addFragment(fragment2, getResources().getString(R.string.vegetables));
