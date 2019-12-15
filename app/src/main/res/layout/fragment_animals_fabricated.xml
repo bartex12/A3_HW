@@ -12,7 +12,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.5">
 
         <TextView
             android:id="@+id/text_fruits"
@@ -25,13 +25,13 @@
             android:textAlignment="center"
             android:textSize="20sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_fabricated"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#DBF8D3">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_fabricated"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DBF8D3">
 
-            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
