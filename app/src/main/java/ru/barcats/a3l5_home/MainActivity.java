@@ -10,6 +10,8 @@ import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "33333";
+    Toolbar toolbar;
     DrawerLayout drawer;
     Fragment fragment;
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
@@ -114,4 +117,6 @@ public class MainActivity extends AppCompatActivity implements
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// эффект
         ft.commit();
     }
+
+
 }

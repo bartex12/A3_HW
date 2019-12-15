@@ -14,7 +14,8 @@
             android:id="@+id/tabs_animals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            app:tabIndicator="@android:color/holo_orange_dark"
+            app:tabIndicatorHeight="3dp"/>
 <!--        не катит эта строка - содержимое пропадает-->
 <!--        app:layout_scrollFlags="scroll|enterAlways"-->
 
