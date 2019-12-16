@@ -28,7 +28,9 @@
             android:layout_marginEnd="8dp"
             android:text="@string/fruit"
             android:textAlignment="center"
+            style="?attr/appBarLayoutStyle"
             android:textSize="20sp" />
+        <!--            android: layoutstyle= " ?attr/appBarLayoutStyle"-->
 
         <ImageView
             android:id="@+id/imageView_"

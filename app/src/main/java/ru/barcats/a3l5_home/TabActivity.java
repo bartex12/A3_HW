@@ -17,6 +17,9 @@ public class TabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme  ( R.style.ThemeStandardt_Yellow);
+        //setTheme(R.style.ThemeStandardt_Red) ;
+        //setTheme(R.style.ThemeStandardt) ;
         setContentView(R.layout.activity_tab);
 
         Fragment fragment1 = Fruits.newInstance();

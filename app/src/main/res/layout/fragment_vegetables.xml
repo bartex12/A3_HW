@@ -21,6 +21,7 @@
                     android:layout_marginEnd="8dp"
                     android:text="@string/vegetables"
                     android:textAlignment="center"
+                    style="?attr/appBarLayoutStyle"
                     android:textSize="20sp" />
 
         <androidx.recyclerview.widget.RecyclerView

@@ -30,4 +30,15 @@
         <item name="android:textStyle">italic</item>
     </style>
 
+    <style name = "standardt_AppBarLayoutStyle"
+        parent = "@style/Widget.Design.AppBarLayout">
+    </style>
+    <style  name= "standardt_AppBarLayoutStyle.Yellow">
+        <item name= "android:background">@color/colorPrimaryYellow</item>
+    </style>
+    <style name = "standardt_AppBarLayoutStyle.Red">
+        <item name= "android:background">@color/colorPrimaryRed</item>
+    </style>
+
+
 </resources>
