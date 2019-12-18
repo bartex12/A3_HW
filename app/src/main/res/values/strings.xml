@@ -150,5 +150,8 @@
     <string name="button_2">Button 2</string>
     <string name="button_1">Button 1</string>
     <string name="simple_button">Просто кнопка</string>
+    <string name="standart_theme">Стандартная тема</string>
+    <string name="green_theme">Зелёная тема</string>
+    <string name="yellow_theme">Жёлтая тема</string>
 
 </resources>
