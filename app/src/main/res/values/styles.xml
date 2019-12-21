@@ -6,20 +6,32 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryGreen</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
         <item name="colorAccent">@color/colorAccentGreen</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemePurple" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryPurple</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPurple</item>
+        <item name="colorAccent">@color/colorAccentPurple</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppThemeYellow" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryYellow</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkYellow</item>
         <item name="colorAccent">@color/colorAccentYellow</item>
-                <item name="windowActionBar">false</item>
-                <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -53,7 +65,7 @@
         <item name= "android:background">@color/colorPrimaryRed</item>
     </style>
 
-    //text styles
+    //Button styles - внешний вид кнопок в StyleActivity
     <style name="MyButtonStyle">
         <item name="android:backgroundTint">@color/colorAccentYellow</item>
         <item name="android:layout_width">match_parent</item>
@@ -66,7 +78,15 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-<!--    style="?attr/borderlessButtonStyle"-->
-<!--    android:text="@string/bordered"-->
+    //text styles - заголовки фрагментов
+    <style name="MyTextInFragStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
 
 </resources>

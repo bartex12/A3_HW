@@ -10,5 +10,6 @@
     <string name="standart_theme">Стандартная тема</string>
     <string name="green_theme">Зелёная тема</string>
     <string name="yellow_theme">Жёлтая тема</string>
+    <string name="purple_theme">Фиолетовая тема</string>
 
 </resources>
