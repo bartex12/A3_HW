@@ -13,7 +13,7 @@ public class ThemeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppThemeGreen);
+        setTheme(R.style.AppThemeYellow);
         setContentView(R.layout.activity_theme);
 
         FloatingActionButton fab = findViewById(R.id.fabTheme);

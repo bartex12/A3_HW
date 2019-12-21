@@ -1,5 +1,51 @@
 <resources>
     <string name="app_name">A3_homework</string>
+    <string name="txt">текст</string>
+    <string name="ok">OK</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_frag1">Фрагмент 1</string>
+    <string name="menu_frag2">Фрагмент 2</string>
+    <string name="menu_frag3">Фрагмент 3</string>
+    <string name="menu_frag4">Фрагмент 4</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="main_activity_name">Главная страница</string>
+    <string name="choose_color">Выбор цветовой темы</string>
+    <string name="name">Имя</string>
+    <string name="input">Войти</string>
+    <string name="snackBarText">Введите имя - от 1 до 10 символов</string>
+    <string name="snackBarText10">Не более 10 символов</string>
+    <string name="input_activity_name">Вход в систему</string>
+    <string name="button1">Показать цвета 1</string>
+    <string name="button2">Показать цвета 2</string>
+    <string name="Button3">Загрузить фрагменты</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="buttonClose">Закрыть</string>
+    <string name="button_text">text</string>
+    <string name="bordered">bordered</string>
+    <string name="raised">raised</string>
+    <string name="raisedElevated">Raised Elevated</string>
+    <string name="raisedFlat">Raised Flat</string>
+    <string name="ToolbarActivity">ToolbarActivity</string>
+    <string name="ButtonActivity">ButtonActivity</string>
+    <string name="fruit">Фрукты</string>
+    <string name="vegetables">Овощи</string>
+    <string name="nature">Природа</string>
+    <string name="animals">Животные</string>
+    <string name="download">Загружай!</string>
+    <string name="sub_">Поиск и загрузка изображений</string>
+    <string name="ToolBarActivity">ToolBarActivity</string>
+    <string name="show">Показать</string>
+    <string name="close">Скрыть</string>
 
     <string name="button_5">Button 5</string>
     <string name="button_4">Button 4</string>
@@ -11,5 +57,24 @@
     <string name="green_theme">Зелёная тема</string>
     <string name="yellow_theme">Жёлтая тема</string>
     <string name="purple_theme">Фиолетовая тема</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mult">Мультяшные животные</string>
+    <string name="home_animals">Домашние животные</string>
+    <string name="wild_animals">Дикие животные</string>
+
+    <string name="fabAct">FabActivity</string>
+    <string name="showAsCard">Показать как карточки</string>
+    <string name="discard">отмена</string>
+    <string name="title_air">Самолёт</string>
+    <string name="title_car">Автомобиль</string>
+    <string name="title_ship">Корабль</string>
+    <string name="horse">Олени</string>
+    <string name="bottomActivity">BottomActivity</string>
+    <string name="TabActivity">TabActivity</string>
+    <string name="fragment1">Fragment1</string>
+    <string name="fragment2">Fragment2</string>
+    <string name="fragment3">Fragment3</string>
+    <string name="materialdesignlesson7">MaterialDesignLesson7</string>
+
 
 </resources>

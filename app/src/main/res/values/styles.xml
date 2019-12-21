@@ -30,8 +30,7 @@
         <item name="colorPrimary">@color/colorPrimaryYellow</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkYellow</item>
         <item name="colorAccent">@color/colorAccentYellow</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
