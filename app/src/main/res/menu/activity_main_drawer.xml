@@ -13,9 +13,13 @@
             android:icon="@drawable/carrot_24px"
             android:title="@string/vegetables" />
         <item
-            android:id="@+id/nav_frag3"
-            android:icon="@drawable/beach_24px"
-            android:title="@string/nature" />
+        android:id="@+id/nav_frag3"
+        android:icon="@drawable/beach_24px"
+        android:title="@string/nature" />
+        <item
+            android:id="@+id/nav_frag4"
+            android:icon="@drawable/ic_pets_black_24dp"
+            android:title="@string/animals" />
 
     </group>
 

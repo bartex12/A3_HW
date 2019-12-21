@@ -1,5 +1,6 @@
 package ru.barcats.a3l5_home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Objects;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "33333";
+    Toolbar toolbar;
     DrawerLayout drawer;
     Fragment fragment;
 
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
@@ -55,8 +59,14 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        fragment = Animals.newInstance();
+        fragment = Fruits.newInstance();
+
         setPicturesFragment(fragment);
+
+//        //самое простое - вызвать заранее написанную TabActivity со всеми вкладками
+//        // тогда при возврате по кнопке назад будет отображаться вкладка Fruits
+//        Intent intent = new Intent(MainActivity.this, TabActivity.class);
+//        startActivity(intent);
     }
 
     @Override
@@ -83,8 +93,12 @@ public class MainActivity extends AppCompatActivity implements
             Log.d(TAG, "MainActivity onNavigationItemSelected fragment_nature");
             fragment = Nature.newInstance();
 
-        }else {
+        }else if (id == R.id.nav_frag4) {
+            Log.d(TAG, "MainActivity onNavigationItemSelected fragment_animals");
             fragment = Animals.newInstance();
+
+        }else {
+            fragment = Nature.newInstance();
         }
         // Выделяем выбранный пункт меню в шторке
         menuItem.setChecked(true);
@@ -103,4 +117,6 @@ public class MainActivity extends AppCompatActivity implements
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// эффект
         ft.commit();
     }
+
+
 }

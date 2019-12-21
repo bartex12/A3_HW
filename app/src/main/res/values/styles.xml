@@ -24,4 +24,10 @@
         <item name="colorControlActivated">#009688</item>
     </style>
 
+    <style name="MessageStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>

@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">A3L5_home</string>
+    <string name="app_name">A3_homework</string>
+    <string name="txt">текст</string>
+    <string name="ok">OK</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -126,5 +128,21 @@
     <string name="fabAct">FabActivity</string>
     <string name="showAsCard">Показать как карточки</string>
     <string name="discard">отмена</string>
+    <string name="title_air">Самолёт</string>
+    <string name="title_car">Автомобиль</string>
+    <string name="title_ship">Корабль</string>
+    <string name="horse">Олени</string>
+    <string name="bottomActivity">BottomActivity</string>
+    <string name="TabActivity">TabActivity</string>
+    <string name="fragment1">Fragment1</string>
+    <string name="fragment2">Fragment2</string>
+    <string name="fragment3">Fragment3</string>
+    <string name="materialdesignlesson7">MaterialDesignLesson7</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mult">Мультяшные животные</string>
+    <string name="home_animals">Домашние животные</string>
+    <string name="wild_animals">Дикие животные</string>
 
 </resources>
