@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="24dp"
-    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="24dp"
     android:clipToPadding="false"
     app:cardCornerRadius="6dp"
     app:cardElevation="8dp">
@@ -15,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="top"
         android:orientation="vertical"
         android:padding="2dp"
         tools:ignore="UseCompoundDrawables">
@@ -23,14 +25,9 @@
             android:id="@+id/text_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:text="@string/fruit"
             android:textAlignment="center"
-            style="?attr/appBarLayoutStyle"
             android:textSize="20sp" />
-        <!--            android: layoutstyle= " ?attr/appBarLayoutStyle"-->
 
         <ImageView
             android:id="@+id/imageView_"

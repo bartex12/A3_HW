@@ -14,15 +14,8 @@
 
                 <TextView
                     android:id="@+id/text_vegetables"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
                     android:text="@string/vegetables"
-                    android:textAlignment="center"
-                    style="?attr/appBarLayoutStyle"
-                    android:textSize="20sp" />
+                    style="@style/MyTextInFragStyle"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerVegetables"

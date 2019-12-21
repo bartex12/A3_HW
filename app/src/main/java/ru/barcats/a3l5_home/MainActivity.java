@@ -38,26 +38,53 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        //если не первый запуск, то меняем тему в зависимости от кода, выбранного в настройках
-//        if(savedInstanceState != null){
-//            themeCode = savedInstanceState.getInt(NEW_THEME);
-//            switch (themeCode) {
-//                case 0:
-//                    setTheme(R.style.AppTheme);
-//                    break;
-//                case 1:
-//                    setTheme(R.style.AppThemeGreen);
-//                    break;
-//                case 2:
-//                    setTheme(R.style.AppThemeYellow);
-//                    break;
-//            }
-//
-//        }
-
+        //если не первый запуск, то меняем тему в зависимости от кода, выбранного в настройках
+        if(savedInstanceState != null){
+            themeCode = savedInstanceState.getInt(NEW_THEME);
+            switch (themeCode) {
+                case 0:
+                    setTheme(R.style.AppTheme);
+                    break;
+                case 1:
+                    setTheme(R.style.AppThemeGreen);
+                    break;
+                case 2:
+                    setTheme(R.style.AppThemePurple);
+                    break;
+            }
+        }
         //делаем всё остальное, что обычно делаем в onCreate
-        //initActivity();
+        initActivity();
 
+        setContentView(R.layout.activity_main);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        drawer = findViewById(R.id.drawer_layout);
+        drawer.openDrawer(GravityCompat.START);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer.openDrawer(GravityCompat.START);
+            }
+        });
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        fragment = Animals.newInstance();
+
+        setPicturesFragment(fragment);
+    }
+
+    private void initActivity() {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
@@ -86,35 +113,6 @@ public class MainActivity extends AppCompatActivity implements
         setPicturesFragment(fragment);
     }
 
-//    private void initActivity() {
-//        setContentView(R.layout.activity_main);
-//
-//        toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        drawer = findViewById(R.id.drawer_layout);
-//        drawer.openDrawer(GravityCompat.START);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-//
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                drawer.openDrawer(GravityCompat.START);
-//            }
-//        });
-//
-//        NavigationView navigationView = findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
-//
-//        fragment = Fruits.newInstance();
-//
-//        setPicturesFragment(fragment);
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -138,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements
                 break;
 
         }
-        //recreate();
+        recreate();
         return super.onOptionsItemSelected(item);
     }
 
@@ -180,14 +178,14 @@ public class MainActivity extends AppCompatActivity implements
     private void setPicturesFragment(Fragment fragment) {
         Log.d(TAG, "MainActivity setPicturesFragment");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.content, fragment);  // замена фрагмента
+        ft.replace(R.id.content1, fragment);  // замена фрагмента
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);// эффект
         ft.commit();
     }
 
-//    @Override
-//    protected void onSaveInstanceState(Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//        outState.putInt(NEW_THEME, themeCode);
-//    }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(NEW_THEME, themeCode);
+    }
 }

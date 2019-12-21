@@ -6,17 +6,17 @@
         android:orderInCategory="10"
         android:icon="@drawable/ic_standart_theme"
         android:title="@string/standart_theme"
-        app:showAsAction="ifRoom|withText" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/green"
         android:orderInCategory="20"
         android:icon="@drawable/ic_green_theme"
         android:title="@string/green_theme"
-        app:showAsAction="ifRoom|withText" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/yellow"
         android:orderInCategory="30"
-        android:icon="@drawable/ic_yellow_theme"
-        android:title="@string/yellow_theme"
-        app:showAsAction="ifRoom|withText" />
+        android:icon="@drawable/ic_purple"
+        android:title="@string/purple_theme"
+        app:showAsAction="never" />
 </menu>
