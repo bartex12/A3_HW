@@ -56,32 +56,6 @@ public class MainActivity extends AppCompatActivity implements
         //делаем всё остальное, что обычно делаем в onCreate
         initActivity();
 
-        setContentView(R.layout.activity_main);
-
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        drawer = findViewById(R.id.drawer_layout);
-        drawer.openDrawer(GravityCompat.START);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawer.openDrawer(GravityCompat.START);
-            }
-        });
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        fragment = Animals.newInstance();
-
-        setPicturesFragment(fragment);
     }
 
     private void initActivity() {
