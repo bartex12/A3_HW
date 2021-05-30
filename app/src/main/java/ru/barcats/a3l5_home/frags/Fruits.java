@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import ru.barcats.a3l5_home.data.DataFruits;
-import ru.barcats.a3l5_home.adapters.MyPictureAdapter;
 import ru.barcats.a3l5_home.R;
+import ru.barcats.a3l5_home.adapters.MyPictureAdapter;
+import ru.barcats.a3l5_home.data.DataFruits;
 
 public class Fruits extends Fragment {
 
@@ -45,6 +45,8 @@ public class Fruits extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+//        GridLayoutManager layoutManager  =     new   GridLayoutManager   (getActivity(),2) ;
+//        recyclerView.setLayoutManager(layoutManager);
         DataFruits dataPicture = new DataFruits();
         MyPictureAdapter adapter = new MyPictureAdapter(dataPicture.getListPictures(),
                 dataPicture.getListResId(),true);

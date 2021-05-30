@@ -10,29 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".BottomActivity"
-            android:label="@string/bottomActivity">
+        <activity android:name=".ThemeActivity"
+            android:label="@string/app_name">
 
         </activity>
 
-        <activity android:name=".TabActivity"
-            android:label="@string/TabActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".StyleActivity"
+            android:label="@string/app_name">
 
-        </activity>
+    </activity>
 
         <activity
             android:name=".InputActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+    </activity>
 
         <activity
             android:name=".MainActivity"
